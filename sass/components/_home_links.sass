@@ -1,0 +1,44 @@
+.home-link-container
+	a
+		&.link
+			@include transition(width 300ms, height 300ms, margin 300ms)
+			vertical-align: middle
+			text-decoration: none
+			color: #fff
+			display: inline-block
+			height: 60px
+			width: 60px
+			margin: 0 5px
+			&:before
+				@include transition(font-size 300ms, color 300ms)
+				font: 
+					size: 60px
+					color: #fff
+
+			@include media($media-small)
+				height: 40px
+				width: 40px
+				&:before
+					@include text-shadow(1px 1px 1px rgba(#000, 0.3))
+					font: 
+						size: 40px
+				&:active,
+				&:focus
+					outline: 0
+				&:hover
+					height: 60px
+					width: 60px
+					margin: 0 10px
+					&:before
+						font: 
+							size: 60px
+
+					&.icon-twitter
+						&:before
+							color: #5ea9dd
+					&.icon-github
+						&:before
+							color: #000
+					&.icon-linkedin				
+						&:before
+							color: #0274b3

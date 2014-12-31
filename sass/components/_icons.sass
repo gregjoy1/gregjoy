@@ -1,0 +1,45 @@
+// More info: https://github.com/perry/sass-font-face
+@mixin font-face($style-name, $file, $family, $category:"")
+	$filepath: "/public/fonts/" + $family + "/" + $file
+	@font-face
+		font-family: "#{$style-name}"
+		src: font-url($filepath + ".eot")
+		src: font-url($filepath + ".eot#iefix") format("embedded-opentype"), font-url($filepath + ".woff") format("woff"), font-url($filepath + ".ttf")  format("truetype"), font-url($filepath + ".svg#" + $style-name + "") format("svg")
+
+	%#{$style-name}
+		font:
+			@if $category != ""
+				family: "#{$style-name}", #{$category}
+			@else
+				family: "#{$style-name}"
+			style: normal
+			weight: normal
+
+@include font-face('icomoon', 'icomoon', 'icomoon')
+
+[class^="icon-"],
+[class*=" icon-"]
+	speak: none
+	font:
+		family: 'icomoon'
+		style: normal
+		weight: normal
+		variant: normal
+	text-transform: none
+	line-height: 1
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon-twitter
+	&:before
+		content: "\ea91"
+
+.icon-github
+	&:before
+		content: "\eab1"
+
+.icon-linkedin
+	&:before
+		content: "\eac8"
