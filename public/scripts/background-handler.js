@@ -1,4 +1,4 @@
-(function ($, _) {
+(function ($) {
 
 	'use strict';
 
@@ -8,7 +8,7 @@
 
 		var backgroundInc = 0;
 
-		function switchBackgrounds (currentBackgroundElement) {
+		function switchBackgrounds () {
 			showBackground(headerBackgrounds[backgroundInc]);
 
 			setTimeout(switchBackgrounds, 20000);
@@ -25,4 +25,4 @@
 
 	});
 
-} (window.jQuery, window._));
+} (window.jQuery));
