@@ -3,6 +3,10 @@
 	'use strict';
 
 	$(document).ready(function () {
+
+		// = = = = = =   = = = = = =   = = = = = = = = = =		
+		// H A N D L E   H E A D E R   B A C K G R O U N D		
+		// = = = = = =   = = = = = =   = = = = = = = = = =		
 		
 		var headerBackgrounds = $('.header-background');
 
@@ -24,6 +28,15 @@
 		}
 
 		switchBackgrounds(0);
+
+		// = = = = = =   = = = =   = = = =
+		// H A N D L E   M A I L   L I N K
+		// = = = = = =   = = = =   = = = =
+
+		// [ ᕤ ಠ (oo) ಠ ]ᕤ ︵ ¡ʇoq ɯɐds
+		$('a.link.icon-mail').on('click', function (event) {
+			this.href = this.href.replace(new RegExp('at', 'g'), '@').replace(new RegExp('dot', 'g'), '.');
+		});
 
 	});
 

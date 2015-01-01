@@ -8,14 +8,17 @@
 			display: inline-block
 			height: 60px
 			width: 60px
-			margin: 0 5px
+			margin: 0
+			cursor: pointer
 			&:before
 				@include transition(font-size 300ms, color 300ms)
+				cursor: pointer
 				font: 
-					size: 60px
+					size: 45px
 					color: #fff
 
 			@include media($media-small)
+				margin: 0 5px
 				height: 40px
 				width: 40px
 				&:before
@@ -39,6 +42,9 @@
 					&.icon-github
 						&:before
 							color: #000
-					&.icon-linkedin				
+					&.icon-linkedin
 						&:before
 							color: #0274b3
+					&.icon-mail
+						&:before
+							color: #ca3523
