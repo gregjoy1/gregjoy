@@ -8,10 +8,12 @@
 
 		var backgroundInc = 0;
 
-		function switchBackgrounds () {
+		function switchBackgrounds (timeoutOverride) {
 			showBackground(headerBackgrounds[backgroundInc]);
 
-			setTimeout(switchBackgrounds, 20000);
+			timeoutOverride = (timeoutOverride !== undefined ? timeoutOverride : 10000);
+
+			setTimeout(switchBackgrounds, timeoutOverride);
 			
 			backgroundInc = ((backgroundInc === headerBackgrounds.length - 1) ? 0 : (backgroundInc + 1));
 		}
@@ -21,7 +23,7 @@
 			$(backgroundElement).addClass('show');
 		}
 
-		switchBackgrounds(headerBackgrounds[0]);
+		switchBackgrounds(0);
 
 	});
 
