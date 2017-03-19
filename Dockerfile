@@ -12,6 +12,12 @@ ADD . .
 
 RUN npm install gulp-cli -g
 RUN npm install http-server -g
+
+# Bower gets upset becasue this is all run with root
+RUN echo '{ "allow_root": true }' > /root/.bowerrc
+RUN npm install bower -g
+
 RUN npm install
+RUN bower install
 
 EXPOSE 3000
