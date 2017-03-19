@@ -1,0 +1,13 @@
+{
+  "name": "GregJoy",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "gulp --gulpfile gulpfile.js"
+    },
+    "dependencies": {
+      "gulp": "~3.9.1",
+      "gulp-compass": "~2.1.0"
+    }
+}
+

@@ -1,2 +1,6 @@
 public/styles/styles.css
 .sass-cache
+**/*.swp
+**/*.swo
+**/node_modules
+

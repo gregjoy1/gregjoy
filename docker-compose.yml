@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: http-server . -p 3000
+  volumes:
+    - ".:/src"
+  ports:
+    - "3000:3000"
