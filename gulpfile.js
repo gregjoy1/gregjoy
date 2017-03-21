@@ -2,6 +2,7 @@ var gulp       = require('gulp');
 var compass    = require('gulp-compass');
 var concat     = require('gulp-concat');
 var minify     = require('gulp-minify');
+var clean      = require('gulp-clean');
 
 gulp.task('compass', function () {
   gulp
@@ -15,6 +16,17 @@ gulp.task('compass', function () {
     .on('error', function (err) {
       console.log(err.message);
     });
+});
+
+gulp.task('clean', function () {
+  var files = [
+    'public/scripts/scripts.js',
+    'public/styles/styles.css'
+  ];
+
+  gulp
+    .src(files)
+    .pipe(clean({read: false}));
 });
 
 gulp.task('concat', function () {
@@ -41,5 +53,5 @@ gulp.task('minify', function () {
 });
 */
 
-gulp.task('default', ['compass', 'concat']);
+gulp.task('default', ['clean', 'compass', 'concat']);
 
